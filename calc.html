@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>サンプル</title>
+    </head>
+    <body>
+        <h1>サンプルプログラム</h1>
+        <input type="number">
+        <input type="number">
+        <button>計算</button>
+        <p>結果表示</p>
+        <script>
+            const ipt=document.querySelectorAll('input');
+            const btn=document.querySelector('button');
+            const elem=document.querySelector('p');
+            btn.addEventListener('click',()=>{
+                elem.innerText=parseInt(ipt[0].value)+parseInt(ipt[1].value);
+                });
+        </script>
+    </body>
+</html>

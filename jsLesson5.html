@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>jsレッスン</title>
+</head>
+<body>
+  <h1>平均の計算</h1>
+  <input type="number" id="num" value="" placeholder="数値を入力"/>
+  <button onclick="add()">Add</button>
+  <button onclick="btCalc()">Calc!</button>
+  <div id="showArray"></div>
+  <div id="result"></div>
+<script>
+const nums=[];
+const eleNum=document.getElementById("num");
+const eleShowArray=document.getElementById("showArray");
+const result=document.getElementById("result");
+const add=()=>{
+    let num=parseInt(eleNum.value);
+    nums.push(num);
+    
+    eleNum.value="";
+    eleShowArray.textContent=nums.join(',');//配列をカンマで結合(カンマは引数省略でも可)
+};
+
+const btCalc=()=>{
+    
+    let sum=0;
+    for(let i=0;i<nums.length;i++){
+        sum+=nums[i];
+    }
+    let msg="要素の平均は"+sum/nums.length+"です。";
+    result.textContent=msg;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>jsレッスン</title>
+</head>
+<body>
+  <h1>平均の計算</h1>
+  <h2 id="data"></h2>
+  <button onclick="btCalc()">Calc!</button>
+  <div id="result"></div>
+<script>
+const nums=[10,32,18,20,40];
+let str="";
+let sum=0;
+for(let i=0;i<nums.length;i++){
+  str += nums[i]+(i==nums.length-1?"":",");
+  sum += nums[i];
+}
+document.getElementById("data").textContent=str;
+const btCalc=()=>{
+    let msg="要素の平均は"+sum/nums.length+"です。";
+    document.getElementById("result").textContent=msg;
+};
+</script>
+</body>
+</html>

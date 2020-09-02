@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <h1>整数を2つ入力して下さい</h1> 
+   x:<input type="number" id="x"><br>
+   y:<input type="number" id="y"><br>
+  <button onclick="purus()">+</button>
+  <button onclick="mainus()">-</button>
+  <button onclick="kakeru()">*</button>
+  <button onclick="waru()">/</button>
+  <button onclick="amari()">%</button>
+  <div id="result"></div>
+  <script>
+      const x=document.getElementById("x");
+      const y=document.getElementById("y");
+      const result=document.getElementById("result");
+      const purus=()=>{
+          let ans=parseInt(x.value)+parseInt(y.value);
+          result.textContent=x.value+'+'+y.value+'='+ans;
+      };
+      const mainus=()=>{
+          let ans=parseInt(x.value)-parseInt(y.value);
+          result.textContent=x.value+'-'+y.value+'='+ans;
+      };
+      const kakeru=()=>{
+          let ans=parseInt(x.value)*parseInt(y.value);
+          result.textContent=x.value+'*'+y.value+'='+ans;
+      };
+      const waru=()=>{
+          let ans=parseInt(x.value)/parseInt(y.value);
+          result.textContent=x.value+'/'+y.value+'='+ans;
+      };
+      const amari=()=>{
+          let ans=parseInt(x.value)%parseInt(y.value);
+          result.textContent=x.value+'%'+y.value+'='+ans;
+      };
+  </script>
+</body>
+</html>

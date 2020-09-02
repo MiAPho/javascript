@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>jsレッスン</title>
+</head>
+<body>
+  <button onclick="btWrite()">書く</button>
+  <button onclick="btCheck()">長さ見る</button>
+  <div id="result"></div>
+<script>
+    const result=document.getElementById("result");
+    class Pen{
+        constructor(length){
+            this.length=length;
+        }
+        write(){
+            this.length-=0.5;
+            return '書きました';
+        }
+    }
+    let pen=new Pen(3);
+    const btWrite=()=>{
+        let msg=pen.write();
+        result.textContent=msg;
+    };
+    const btCheck=()=>{
+        result.textContent=`長さは${pen.length}です。`;
+    };
+</script>
+</body>
+</html>

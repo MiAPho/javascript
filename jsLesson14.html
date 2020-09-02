@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>jsレッスン</title>
+<style>
+    .active{
+        font-size: 30px;
+        color: blue;
+    }
+</style>
+</head>
+<body>
+    <p>Hello</p>
+<button id="btn">追加</button>
+<ol id="list"></ol>
+<script>
+    const ele=document.querySelector("p");
+    const ol=document.getElementById("list");
+    const btn=document.getElementById("btn");
+    let count=0;
+    btn.addEventListener("click",()=>{
+        let li=document.createElement("li");
+        li.textContent="Item"+(++count);
+        ol.appendChild(li);
+    });
+    ele.addEventListener("click",()=>{
+        ele.classList.toggle("active");
+    });
+    ele.addEventListener("mouseover",()=>{
+        ele.classList.remove("active");
+    });
+</script>
+</body>
+</html>

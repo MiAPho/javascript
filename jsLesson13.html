@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>jsレッスン</title>
+</head>
+<body>
+<button id="a">A</button>
+<button id="b">B</button>
+<div id="result"></div>
+<script>
+    window.onload=()=>{
+        document.getElementById('a').onclick=myHandler;
+        document.getElementById('b').onclick=myHandler;
+    };
+    function myHandler(e){
+        console.dir(e);
+        document.getElementById('result').textContent=e.target.textContent+'が選ばれた';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>9*9</title>
+    <style>
+        table{
+            border-collapse:collapse;
+        }
+        th,td{
+            border:1px solid#333;
+            width:50px;
+            height: 50px;
+            text-align: center;
+        }
+        th{
+            background:#1cb8ec;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+   <table id="table"></table> 
+   <script>
+       'use strict';
+       window.onload=()=>{
+           const table=document.getElementById('table');
+           const MAX=9;
+           for(let i=0;i<=MAX;i++){
+               let tr=document.createElement('tr');
+               for(let j=0;j<=MAX;j++){
+                   let td;
+                   if(i===0){
+                       td=document.createElement('th');
+                       if(j===0){
+                           td.textContent='X';
+                       }else{
+                           td.textContent=j;
+                       }
+                   }else{
+                       if(j===0){
+                           td=document.createElement('th');
+                           td.textContent=i;
+                       }else{
+                           td=document.createElement('td');
+                           td.textContent=i*j;
+                       }
+                   }
+                   tr.appendChild(td);
+               }
+               table.appendChild(tr);
+           }
+       };
+   </script>
+</body>
+</html>
